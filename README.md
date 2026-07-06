@@ -156,5 +156,8 @@
 
 1. 项目保存位置禁止存在中文,否则会启动失败
 2. 可能会在 Header 头添加 X-Mitm 字段，不要随意更改。最终该字段会被删除
-3. 工具实战
-    ● 
+3. 借助 <a href="https://github.com/SwagXz/encrypt-labs">encrypt-labs</a> 靶场进行工具实战
+
+    ● <a href="https://github.com/yangwang-1211/EasyDecrypt/wiki/Repeate">防重放</a>
+    
+    ● <a href="https://github.com/yangwang-1211/EasyDecrypt/wiki/AES">AES加解密</a>
