@@ -82,7 +82,7 @@
   
       - 具体函数实现/Type2：在 Type1 分类基础上进一步细化具体算法或实现方式，具体可用函数如下图6
 
-     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/6.png" width="600" />
+     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/73b1f2e62cd0b109148c85958561b4db2a5bb40c/img/6.png" width="600" />
 
       - 输出变量定义/Output： 用于定义当前操作函数的结果变量名，执行结果将绑定至该变量，可在后续函数节点中作为输入被继续调用
   
@@ -126,9 +126,9 @@
 
     ● 配置 Burp 的下一跳代理到“下游监听端口”
 
-     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/9.png" width="600" />
+     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/73b1f2e62cd0b109148c85958561b4db2a5bb40c/img/9.png" width="600" />
 
-     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/10.png" width="600" />
+     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/73b1f2e62cd0b109148c85958561b4db2a5bb40c/img/10.png" width="600" />
 
 4. Mitmproxy 证书安装（火狐浏览器需要在浏览器中安装证书，具体安装方式可以自行百度）
 
@@ -136,8 +136,8 @@
 
     ● 双击证书-安装证书-收信人的根证书颁发机构
 
-     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/11.png" width="600" />
+     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/73b1f2e62cd0b109148c85958561b4db2a5bb40c/img/11.png" width="600" />
 
-     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/12.png" width="600" />
+     <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/73b1f2e62cd0b109148c85958561b4db2a5bb40c/img/12.png" width="600" />
 
 5. 正常访问指定规则的网站，在 Burp 中查看请求/响应报文是否按照规则修改
