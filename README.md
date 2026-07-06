@@ -21,7 +21,9 @@
 
 ● 配置好规则即可对请求/响应报文按规则处理，对用户完全透明
 
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/1.png" width="600" />
+</p>
 
 上游代理：负责拦截来自浏览器/小程序的请求报文，对业务层加密报文进行自动解密和结构还原，使 Burp 等抓包工具能够直接查看和修改明文数据；接收 Burp 修改后的明文响应，自动完成重新加密与签名生成，确保数据能够以符合业务协议的形式正确发往浏览器/小程序
 
@@ -43,7 +45,9 @@
   
 * 日志窗体：记录执行规则过程中报错接口、报错信息等内容。方便排查问题
 
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/2.png" width="600" />
+</p>
 
 上/下游代理规则配置页面， 其核心目标是将请求/响应的加密、解密、签名逻辑抽象为可配置的规则集合，并在代理链路中动态生效。该界面具体组件如下
 
@@ -57,33 +61,43 @@
   
   * 请求/响应：分为request和response两种类型
 
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/3.png" width="600" />
+</p>
 
 * 规则集合管理：记录上/下游保存过的所有规则（上/下游规则通过菜单栏的 Upstream 和 Downstream 区分）
 
   * 🟠图标：点击后展示指定规则的“基础内容”和对请求报文的“操作函数集合”
   
   * 🟢图标：点击后展示指定规则的“基础内容”和对响应报文的“操作函数集合”
-  
+
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/4.png" width="600" />
+</p>
 
 * 操作函数集合：用于定义和展示某条规则内部的处理逻辑链路
 
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/5.png" width="600" />
+</p>
 
 * 操作函数配置窗体：点击新增按钮弹出操作函数配置窗口，通过“函数选择 + 输入输出变量选择”的方式定义请求/响应报文的处理逻辑
 
   * 函数类别/Type1： 用于定义操作函数的一级分类，例如编码/解码、加密/解密、哈希算法、时间戳生成等，用于确定操作函数的功能域
   
-  * 具体函数实现/Type2：在 Type1 分类基础上进一步细化具体算法或实现方式，具体可用函数如下
+  * 具体函数实现/Type2：在 Type1 分类基础上进一步细化具体算法或实现方式，具体可用函数如下图6
 
   * 输出变量定义/Output： 用于定义当前操作函数的结果变量名，执行结果将绑定至该变量，可在后续函数节点中作为输入被继续调用
   
   * 输入参数绑定/Input： 根据 Type1 与 Type2 的选择动态生成对应的输入参数结构， 用于从请求/响应报文中提取变量或引用上游节点的输出变量，实现跨节点数据流传递
 
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/6.png" width="600" />
+</p>
 
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/7.png" width="600" />
+</p>
 
 * 规则执行与验证：
 
@@ -93,7 +107,9 @@
   
   * 右边文本框中保存为执行规则后的请求/响应报文
 
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/8.png" width="600" />
+</p>
 
 ### 工具使用过程
 
@@ -117,20 +133,28 @@
 
   * 配置浏览器/小程序的下一跳代理到“上游监听端口”
 
-<img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/9.png" width="600" />
-
   * 配置 Burp 的下一跳代理到“下游监听端口”
 
+<p align="center">
+<img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/9.png" width="600" />
+</p>
+
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/10.png" width="600" />
+</p>
 
 * Mitmproxy 证书安装（火狐浏览器需要在浏览器中安装证书，具体安装方式可以自行百度）
 
   * windows 主机选择 Cert 文件夹下的 .cer 证书
 
-<img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/11.png" width="600" />
-
   * 双击证书-安装证书-收信人的根证书颁发机构
 
+<p align="center">
+<img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/11.png" width="600" />
+</p>
+
+<p align="center">
 <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/12.png" width="600" />
+</p>
 
 * 正常访问指定规则的网站，在 Burp 中查看请求/响应报文是否按照规则修改
