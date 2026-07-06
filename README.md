@@ -1,17 +1,17 @@
-### 问题起因
-在现代应用中（App、小程序、Web），大量接口具备以下特征：
+# EasyDecrypt
+    在现代应用中（App、小程序、Web），大量接口具备以下特征：
 
-●  请求包/响应包数据加密（AES/SM4/RSA等）
+      ● 请求包/响应包数据加密（AES/SM4/RSA等）
 
-●  服务端校验签名、随机数、时间戳（Sign/Nonce/Timestamp等）
+      ● 服务端校验签名、随机数、时间戳（Sign/Nonce/Timestamp等）
 
-导致安全测试人员在使用 Burp/Yakit 等抓包工具时面临几个常见问题：
+    导致安全测试人员在使用 Burp/Yakit 等抓包工具时面临几个常见问题：
 
-●  Burp/Yakit 只能看到加密后的密文
+      ● Burp/Yakit 只能看到加密后的密文
 
-●  修改参数后签名校验失败
+      ● 修改参数后签名校验失败
 
-●  重放数据包每次都需要修改报文的 Nonce 等防重放字段 
+      ● 重放数据包每次都需要修改报文的 Nonce 等防重放字段 
 
 ### 工具介绍
 
@@ -21,9 +21,11 @@
 
 ● 配置好规则即可对请求/响应报文按规则处理，对用户完全透明
 
-<p align="center">
-<img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/1.png" width="600" />
-</p>
+
+<div style="padding-left: 80px">
+    <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/1.png" width="600">
+</div>
+
 
 上游代理：负责拦截来自浏览器/小程序的请求报文，对业务层加密报文进行自动解密和结构还原，使 Burp 等抓包工具能够直接查看和修改明文数据；接收 Burp 修改后的明文响应，自动完成重新加密与签名生成，确保数据能够以符合业务协议的形式正确发往浏览器/小程序
 
@@ -31,7 +33,7 @@
 
 ### 界面展示
 
-启动上/下游代理规则界面主要用于管理整个代理链路的规则加载与监听端口设置，核心由三部分组成：
+1. 启动上/下游代理规则界面主要用于管理整个代理链路的规则加载与监听端口设置，核心由三部分组成：
 
 * 上/下游代理规则：用于展示当前可用的规则集，并支持按需选择和加载不同的规则
 
@@ -45,11 +47,11 @@
   
 * 日志窗体：记录执行规则过程中报错接口、报错信息等内容。方便排查问题
 
-<p align="center">
-<img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/2.png" width="600" />
-</p>
+<div style="padding-left: 80px;">
+    <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/2.png" width="600">
+</div>
 
-上/下游代理规则配置页面， 其核心目标是将请求/响应的加密、解密、签名逻辑抽象为可配置的规则集合，并在代理链路中动态生效。该界面具体组件如下
+2. 上/下游代理规则配置页面， 其核心目标是将请求/响应的加密、解密、签名逻辑抽象为可配置的规则集合，并在代理链路中动态生效。该界面具体组件如下
 
 * 规则基础内容：
 
