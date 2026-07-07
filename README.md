@@ -108,7 +108,7 @@
 
      <img src="https://github.com/yangwang-1211/EasyDecrypt/blob/78921ebf49ce02128496fed1cc59c85c6550f9b4/img/8.png" width="600" />
 
-### 📖 工具使用过程
+### 📖 工具使用
 
 ---
 
@@ -156,8 +156,17 @@
 
 1. 项目保存位置禁止存在中文,否则会启动失败
 2. 可能会在 Header 头添加 X-Mitm 字段，不要随意更改。最终该字段会被删除
-3. 借助 <a href="https://github.com/SwagXz/encrypt-labs">encrypt-labs</a> 靶场进行工具实战
+3. 运行工具可能报毒（KDF.cpython-38.pyc），具体原因未知，可将该工具文件夹放到杀毒软件白名单（项目完全开源未打包为exe，可自行进行病毒查杀和代码分析，保证绿色无毒）
+4. 借助 <a href="https://github.com/SwagXz/encrypt-labs">encrypt-labs</a> 靶场进行工具实战
 
     ● <a href="https://github.com/yangwang-1211/EasyDecrypt/wiki/Repeate">防重放</a>
     
     ● <a href="https://github.com/yangwang-1211/EasyDecrypt/wiki/AES">AES加解密</a>
+
+### ⭐ 结语
+
+---
+
+    若工具使用存在任何问题，可提 Issue
+    
+    制作不易，项目完全开源，方便的话给个星
