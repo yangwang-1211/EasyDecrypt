@@ -157,7 +157,7 @@
 1. 项目保存位置禁止存在中文,否则会启动失败
 2. 可能会在 Header 头添加 X-Mitm 字段，不要随意更改。最终该字段会被删除
 3. 运行工具可能报毒（KDF.cpython-38.pyc），具体原因未知，可将该工具文件夹放到杀毒软件白名单（项目完全开源未打包为exe，可自行进行病毒查杀和代码分析，保证绿色无毒）
-4. 借助 <a href="https://github.com/SwagXz/encrypt-labs">encrypt-labs</a> 靶场进行工具实战
+4. 借助 <a href="https://github.com/SwagXz/encrypt-labs">Encrypt-Labs</a> 靶场进行工具实战
 
     ● <a href="https://github.com/yangwang-1211/EasyDecrypt/wiki/Repeate">防重放</a>
     
@@ -167,6 +167,8 @@
 
 ---
 
-    若工具使用存在任何问题，可提 Issue
+    若工具使用存在任何问题可提Issue,也可添加下方QQ私信(备注Github即可)
     
-    制作不易，项目完全开源，方便的话给个星
+    制作不易，项目完全开源，若有其他需求后续也会持续更新。方便的话给个星⭐
+
+<img src="https://github.com/yangwang-1211/EasyDecrypt/blob/cadd3d00d4361659868fbea511f9eaab9b8ed0a5/img/QQ.png" width="200" />
